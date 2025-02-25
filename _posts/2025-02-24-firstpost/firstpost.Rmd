@@ -1,0 +1,30 @@
+---
+title: "First_Post"
+description: |
+  Individual cars
+author:
+   Erick Njue
+date: 2025-02-24
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+
+Individual cars
+
+```{r}
+ggplot(mtcars, aes(x = mpg)) +
+  geom_dotplot(binwidth = 1, fill = "blue") +
+  labs(title = "Dot Plot of MPG", x = "Miles per Gallon") +
+  theme_minimal()
+```
+
+
+
+
